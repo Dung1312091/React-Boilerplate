@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { IntlProvider } from "react-intl";
-import {connect} from 'react-redux';
+import { Route, Switch } from 'react-router-dom';
+import { IntlProvider } from 'react-intl';
+import { connect } from 'react-redux';
 import UserProfile from './containers/UserProfile';
-import logo from './logo.svg';
+import Test from './components/Text';
 import './App.css';
 
 class App extends Component {
@@ -10,17 +11,20 @@ class App extends Component {
     const { location, isAuthenticated, loaded, lang } = this.props;
     return (
       <IntlProvider locale={lang}>
-        <UserProfile/>
+        <Switch>
+          <Route exact path="/" component={UserProfile} />
+          <Route exact path="/user/profile" component={Test} />
+        </Switch>
       </IntlProvider>
     );
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     isAuthenticated: !!state.user.email,
     loaded: state.user.loaded,
     lang: state.user.lang
   };
-}
+};
 export default connect(mapStateToProps)(App);
