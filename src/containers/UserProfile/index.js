@@ -4,7 +4,6 @@ import User from '../../components/User';
 import { login } from './action';
 export class UserProfile extends Component {
   render() {
-    console.log('this.props', this.props);
     return (
       <div>
         <User {...this.props} />
@@ -13,7 +12,6 @@ export class UserProfile extends Component {
   }
 }
 const mapStateToProps = state => {
-  console.log('state', state);
   return {
     isAuthenticated: !!state.user.email,
     loaded: state.user.loaded,
