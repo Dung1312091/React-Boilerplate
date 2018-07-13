@@ -1,0 +1,142 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 55px
+}
+.leftSideBar {
+    height: 100%;
+    width: 50px;
+    background-color: #0D131F;
+    display: flex;
+    position: fixed;
+    top: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    z-index: 100;
+    -webkit-transition: width 0.5s ease-in-out;
+    -moz-transition: width 0.5s ease-in-out;
+    -o-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+}
+.colapse {
+    width: 225px;
+}
+.rightCnt {
+    width: 100%;
+    height: 100%;
+    /* margin-left: 50px; */
+    /* padding: 15px; */
+    word-wrap: break-word;      /* IE 5.5-7 */
+      white-space: -moz-pre-wrap; /* Firefox 1.0-2.0 */
+      white-space: pre-wrap; 
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+ul li {
+    list-style-type: none;
+    padding: 10px 0px 10px 0px;
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: none;
+    background-color: red
+}
+
+.active {
+    background-color: gold
+}
+
+.routerLink {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.routerLink .icon {
+    color: white;
+    font-size: 30px;
+    position: fixed;
+    left: 8px;
+}
+
+.menuText {
+    color: white;
+    font-size: 16px;
+    /* position: fixed;
+    left: 50px; */
+    margin-left: 50px;
+    padding: 5px;
+}
+
+.collapse>ul>li>a>.menuText {
+    display: block;
+}
+
+.overlay {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: white;
+    z-index: 20;
+    -webkit-transition: background-color 0.3s display 0.3s ease-in-out;
+    -moz-transition: background-color 0.3s ease-in-out;
+    -o-transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s display 0.1s ease-in-out;
+}
+.overlay-transition {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: inline-block
+}
+.profile {
+    display: flex;
+    align-items: center
+}
+
+.profileInfo {
+    display: flex;
+    flex-direction: column
+}
+
+.textProfile {
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    /* margin-left: 50px; */
+    left: 60px;
+    top: 40px
+}
+
+.groupMenu {
+    display: flex;
+    align-items: center;
+    color: white;
+    height: 45px;
+}
+.collapse ul .groupMenu {
+    background-color: black;
+}
+.collapse ul .groupMenuText {
+    display: block;
+}
+
+.groupMenuText {
+   display: none;
+   margin-left: 10px
+}
+
+.dashBoard {
+    background-color: #142036;
+    padding: 0px;
+}
+ .headerBoder {
+    color: red
+  }
